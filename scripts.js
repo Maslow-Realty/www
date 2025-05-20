@@ -1,27 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
   const siteData = JSON.parse(document.getElementById("site-data").textContent);
 
-  console.log("📊 Loaded site configuration:", siteData);
+  // Log site info
+  console.log("🔧 Site Configuration Loaded:", siteData);
 
-  // Example: Highlight active navigation based on scroll
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
+  // Dynamically insert gallery images
+  const galleryContainer = document.querySelector(".gallery");
+  if (galleryContainer && siteData.galleryImages) {
+    siteData.galleryImages.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "Property image";
+      img.classList.add("gallery-image");
+      galleryContainer.appendChild(img);
+    });
+  }
 
+  // Scroll-based reveal animation
+  const reveals = document.querySelectorAll(".reveal");
   window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
-        current = section.getAttribute("id");
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 100;
+      if (elementTop < windowHeight - revealPoint) {
+        reveals[i].classList.add("active");
       }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
+    }
   });
 });
-
