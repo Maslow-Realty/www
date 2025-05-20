@@ -20,13 +20,19 @@
         "Community Management",
         "Rental Asset Management",
         "Property Sales"
+      ],
+      "galleryImages": [
+        "img/gallery1.jpg",
+        "img/gallery2.jpg",
+        "img/gallery3.jpg",
+        "img/gallery4.jpg"
       ]
     }
   </script>
 </head>
 
 <body>
-  <header>
+  <header class="animated fadeInDown">
     <img src="maslow-logo.svg" alt="Maslow Realty Logo">
     <nav>
       <a href="#about">About</a>
@@ -35,7 +41,7 @@
     </nav>
   </header>
 
-  <div class="hero">
+  <div class="hero animated fadeIn">
     <div class="hero-content">
       <h1>Your Property, Our Priority</h1>
       <p>Community Management | Rentals | Sales | Sectional Titles</p>
@@ -46,12 +52,12 @@
     </div>
   </div>
 
-  <section id="about" class="bx--tile">
+  <section id="about" class="bx--tile reveal">
     <h2>About Maslow Realty</h2>
     <p>We specialize in full-spectrum property services including sectional title management, rentals, and sales, tailored to the needs of modern communities and investors.</p>
   </section>
 
-  <section id="services">
+  <section id="services" class="reveal">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-card bx--tile">
@@ -69,13 +75,20 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="gallery" class="reveal">
+    <h2>Our Properties</h2>
+    <div class="gallery">
+      <!-- Gallery images inserted dynamically by scripts.js -->
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:info@maslowrealty.co.za">info@maslowrealty.co.za</a> | Phone: (010) 448 0282</p>
     <p>Visit: 47 Voortrekker Street, South Crest, Alberton 1449</p>
   </section>
 
-  <footer>
+  <footer class="animated fadeInUp">
     <p>&copy; 2024 Maslow Realty | All rights reserved</p>
     <div class="footer-links">
       <a href="#">Privacy Policy</a>
