@@ -60,6 +60,7 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 12px;
+  max-width: 600px;
 }
 
 .cta a {
@@ -175,5 +176,28 @@ footer {
   .cta {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+/* Accessibility: Forced Colors Mode */
+@media (forced-colors: active) {
+  body {
+    background: Canvas;
+    color: CanvasText;
+  }
+  a {
+    color: LinkText;
+  }
+  header,
+  footer,
+  .cta a,
+  .service-card {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid ButtonText;
+  }
+  .cta a {
+    background: ButtonFace;
+    color: ButtonText;
   }
 }
