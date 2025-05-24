@@ -1,84 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maslow Realty | Property Experts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maslow Realty offers expert property management, sales, and rental solutions in South Africa. Trusted by communities and investors alike.">
+  <title>Maslow Realty | Property Experts</title>
+
+  <!-- IBM Carbon Design System -->
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+  <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js" defer></script>
+
+  <style>
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    .hero {
+      position: relative;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: url('sandton.mp4') no-repeat center center / cover;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 3rem;
+      border-radius: 12px;
+    }
+    .cta {
+      margin-top: 1.5rem;
+    }
+    .cta .bx--btn {
+      margin-right: 1rem;
+    }
+    .services, .gallery {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background: #0f62fe;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="row">
-    <div class="col my-2">
-      <img id="company-logo" src="MASLOW-logo-2020-hi.avif" alt="Maslow Realty logo">
-        
-    </div>
-    <div class="col">
-      
-    </div>
-    <div class="col d-flex justify-content-end">
-      <nav class="mt-4" aria-label="Main Navigation" role="navigation">
-        <a class="p-3 fs-5" href="#about">About</a>
-        <a class="p-3 fs-5" href="#services">Services</a>
-        <a class="p-3 fs-5" href="#contact">Contact</a>
-      </nav>
-    </div>
-    </div>
-  </div>
-  
-  
+<main id="main-content" role="main">
 
-    <!-- <div class="video-parallax">
-  <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
-    <track kind="captions" src="captions.vtt" srclang="en" label="English captions">
-    <source src="sandton.mp4" type="video/mp4" />
-  </video>
+<header class="bx--header" role="banner" aria-label="Maslow Realty">
+  <a class="bx--skip-to-content" href="#main-content">Skip to main content</a>
+  <a href="#" class="bx--header__name">Maslow Realty</a>
+  <nav class="bx--header__nav" aria-label="Main Navigation">
+    <ul class="bx--header__menu-bar">
+      <li class="bx--header__menu-item"><a class="bx--header__menu-link" href="#about">About</a></li>
+      <li class="bx--header__menu-item"><a class="bx--header__menu-link" href="#services">Services</a></li>
+      <li class="bx--header__menu-item"><a class="bx--header__menu-link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="parallax-overlay"></div>
-
-
-  <div class="parallax-content">
-    
-    <div class="hero-content">
-    <h1></h1>
-    
-  </div>
-  </div>
-</div> -->
-
-<section id="about" class="bx--tile reveal" role="region" aria-label="About Maslow Realty">
-  <div class="bParallax">
-
-    <div class="bParallax-contents p-5">
-        <h1 class="p-4 ">Welcome to Maslow Realty</h1>
-    <h5 class="p-4">Your Property, Our Priority</h5>
-    <p class="fs-5">Community Management | Rentals | Sales | Sectional Titles</p>
+<div class="hero">
+  <div class="hero-overlay">
+    <h1 class="bx--type-expressive-heading-04">Your Property, Our Priority</h1>
+    <p class="bx--type-body-long-02">Community Management | Rentals | Sales | Sectional Titles</p>
     <div class="cta">
-      <a class="p-4 fs-4" href="#list" aria-label="List your property">List Your Property</a>
-      <a class="p-4 fs-4" href="#quote" aria-label="Request a quote">Request a Quote</a>
+      <button class="bx--btn bx--btn--primary">List Your Property</button>
+      <button class="bx--btn bx--btn--tertiary">Request a Quote</button>
     </div>
+  </div>
+</div>
+
+<section id="about" class="bx--tile" style="margin: 2rem;">
+  <h2 class="bx--type-expressive-heading-03">About Maslow Realty</h2>
+  <p class="bx--type-body-long-02">We specialize in full-spectrum property services including sectional title management, rentals, and sales, tailored to the needs of modern communities and investors.</p>
+</section>
+
+<section id="services" style="margin: 2rem;">
+  <h2 class="bx--type-expressive-heading-03">Our Services</h2>
+  <div class="services">
+    <div class="bx--tile">
+      <h3 class="bx--type-expressive-heading-04">Community Management</h3>
+      <p class="bx--type-body-long-01">Comprehensive HOA and body corporate services focused on compliance, support, and administration.</p>
+    </div>
+    <div class="bx--tile">
+      <h3 class="bx--type-expressive-heading-04">Rental Asset Management</h3>
+      <p class="bx--type-body-long-01">Marketing, leasing, and tenant relationship management to maximize ROI and reduce vacancies.</p>
+    </div>
+    <div class="bx--tile">
+      <h3 class="bx--type-expressive-heading-04">Property Sales</h3>
+      <p class="bx--type-body-long-01">Professional property listings and valuations backed by a team of experienced estate professionals.</p>
     </div>
   </div>
 </section>
 
-<section>
-    <div class="row">
-        <div class="col">
-        <h2 class="pt-3">About Us</h2>
-        <p class="p-5 fs-5">Maslow Realty is a leading property management company dedicated to providing exceptional service and expertise in the real estate market. Our team of professionals is committed to helping you navigate the complexities of property management, whether you're a homeowner, investor, or tenant.</p>
-        </div>
-    </div>
+<section id="gallery" style="margin: 2rem;">
+  <h2 class="bx--type-expressive-heading-03">Our Properties</h2>
+  <div class="gallery">
+    <img src="1_converted.webp" alt="Property image 1">
+    <img src="2_converted.webp" alt="Property image 2">
+    <img src="3_converted.webp" alt="Property image 3">
+    <img src="4_converted.webp" alt="Property image 4">
+  </div>
 </section>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<section id="contact" style="margin: 2rem;">
+  <h2 class="bx--type-expressive-heading-03">Contact Us</h2>
+  <p class="bx--type-body-long-01">Email: <a href="mailto:info@maslowrealty.co.za">info@maslowrealty.co.za</a> | Phone: (010) 448 0282</p>
+  <p class="bx--type-body-long-01">Visit: 47 Voortrekker Street, South Crest, Alberton 1449</p>
+</section>
+
+<footer>
+  <p>&copy; 2024 Maslow Realty | All rights reserved</p>
+  <div>
+    <a href="#" class="bx--link">Privacy Policy</a> |
+    <a href="#" class="bx--link">Terms of Service</a> |
+    <a href="https://github.com/Maslow-Realty/www" class="bx--link">GitHub</a>
+  </div>
+</footer>
+
+</main>
+
 </body>
 </html>
-
-<!-- 
-<a href="https://www.freepik.com/free-photo/observation-urban-building-business-steel_1046153.htm#fromView=keyword&page=1&position=0&uuid=6047828f-6472-4f38-8c39-a142734d1a7a&query=Real+Estate+Background">Image by evening_tao on Freepik</a>
-
-<a href="https://www.freepik.com/free-photo/high-angle-shot-warsaw-poland-sunset_9970548.htm#fromView=search&page=1&position=0&uuid=33a4661d-3061-4e75-93d0-3bc57a31fcc3&query=sandton">Image by wirestock on Freepik</a>
--->
