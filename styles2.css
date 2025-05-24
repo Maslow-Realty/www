@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 /* Global Styling */
 body {
   font-family: 'Montserrat', sans-serif;
@@ -74,6 +75,29 @@ nav a:hover {
 }
 .cta a:hover {
   background: #0043ce;
+}
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: @media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  header, footer {
+    background: #1f1f1f;
+  }
+  .service-card, .gallery-image {
+    background: #1a1a1a;
+    color: #ccc;
+  }
+} 
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* Cards */
@@ -179,6 +203,20 @@ footer {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  header, footer {
+    background: #1f1f1f;
+  }
+  .service-card, .gallery-image {
+    background: #1a1a1a;
+    color: #ccc;
+  }
+}
+
 /* Accessibility: Forced Colors Mode */
 @media (forced-colors: active) {
   body {
@@ -201,7 +239,6 @@ footer {
     color: ButtonText;
   }
 }
-
 
 a:focus-visible,
 button:focus-visible {
